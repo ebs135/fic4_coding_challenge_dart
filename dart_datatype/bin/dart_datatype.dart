@@ -1,5 +1,4 @@
 void main(List<String> arguments) {
-  String pesan = '';
   var usia = int.parse(arguments[0]);
 
   if (usia >= 18) {
