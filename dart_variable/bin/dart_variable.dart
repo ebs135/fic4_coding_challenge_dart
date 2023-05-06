@@ -1,5 +1,3 @@
-import 'package:dart_variable/dart_variable.dart' as dart_variable;
-
 void main(List<String> arguments) {
   int panjang = 5;
   int lebar = 2;
