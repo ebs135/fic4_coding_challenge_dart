@@ -1,24 +1,22 @@
+import 'dart:io';
+
 void main(List<String> arguments) {
-  var argLength = arguments.length;
+  var string = '';
 
-  if (argLength > 0) {
+  // Ambil data dari parameter pertama arguments
+  if (arguments.isNotEmpty) {
     var word = arguments[0];
-    final string = toCapitalize(word: word);
-
-    if (string != 'word is null') {
-      print('String parameter setelah dikapitalisasi: $string');
-    } else {
-      print('word is null');
-    }
-  } else {
-    print('Anda harus memasukkan argumen');
+    string = toCapitalize(word: word);
+  } else
+  // Ambil data dari inputan keyboard user
+  {
+    stdout.write('Masukkan kata yang ingin dikapitalisasi : ');
+    string = toCapitalize(word: stdin.readLineSync());
   }
+
+  print('String parameter setelah dikapitalisasi: $string');
 }
 
 String toCapitalize({String? word}) {
-  if (word != null) {
-    return word.toUpperCase();
-  } else {
-    return 'word is null';
-  }
+  return word!.toUpperCase();
 }

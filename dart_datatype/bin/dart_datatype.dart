@@ -1,5 +1,8 @@
+import 'dart:io';
+
 void main(List<String> arguments) {
-  var usia = int.parse(arguments[0]);
+  stdout.write('Masukkan usia Anda : ');
+  var usia = int.parse(stdin.readLineSync()!);
 
   if (usia >= 18) {
     print('Anda adalah seorang dewasa');
